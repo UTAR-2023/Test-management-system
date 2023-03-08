@@ -1,0 +1,28 @@
+actScore=int(input("ACT score   : "))
+aboAv=input("Is athlete above average?  (Y/N): ")
+gpaStu=float(input("Enter gpa score : "))
+#These three variables are input
+
+ponCan= int(0)
+#This constant is to keep track if athelete meets requirements
+
+if actScore >= 18:
+    ponCan = ponCan + 1
+else: 
+    ponCan = ponCan + 0
+#^ If the score is more than 18, they get 1 point, if less, they get no points. Else must end with a statement or it fail
+if aboAv == "Y" :
+    ponCan= ponCan + 1
+else:
+    ponCan = ponCan + 0
+#^If user input capital Y (Important to note that it is case sensitive(Capital or not)) plus 1, if not "Y", no points
+if gpaStu >= 2.0:
+    ponCan= ponCan + 1
+else:
+    ponCan = ponCan + 0
+#^If score is more or equal to 2.0, plus 1, if not plus 0
+if ponCan >= 2:
+    print("Pass")
+else:
+    print("Fail")
+#Sum of score must be 2 or more if not fail
