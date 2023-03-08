@@ -1,0 +1,11 @@
+airInd=int(input("Enter air index "))
+#Very important to put "and"
+if airInd >= 100 and airInd < 200 :
+    print("Not good")
+elif airInd >= 200 and airInd < 275:
+    print("Really not good")
+elif airInd >= 275 :
+    print("Die")
+elif airInd < 100 :
+    print("Your fine")
+
