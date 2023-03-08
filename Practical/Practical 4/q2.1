@@ -1,0 +1,34 @@
+def isfloat(numStr):
+    status=True
+    try:
+        float(numStr)
+    except:
+        status=False
+    return status
+
+def prac4q1P():
+
+    msg=["NE", "NE", "E", "E"]
+    actScore=input("ACT score   : ")
+    if actScore.isdigit():
+        actScore=int(actScore)
+
+        aboAv=input("Is athlete above average?  (Y/N): ")
+        if aboAv in ["Y","Yes", "N", "No"]:
+            
+                gpaStu=input("Enter gpa score : ")
+                if isfloat(gpaStu):
+                    potCan=0
+                    potCan += (actScore >=15)
+                    potCan += aboAv.upper() in ["Y", "Yes"]
+                    potCan += float(gpaStu) >=2.0
+                    print(msg[potCan])
+                else:
+                    print("Uh oh, gpa")
+        else:
+            print("uh oh, abo")
+
+    else:
+        print("uh oh, score")
+
+prac4q1P()
